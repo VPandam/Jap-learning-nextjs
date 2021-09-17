@@ -61,10 +61,8 @@ export default css`
     width: 45%;
     height: 75%;
 
-    /* position: relative; */
     display: flex;
     flex-direction: column;
-    /* top: 10vh; */
 
     margin: auto 0;
     }
@@ -127,31 +125,36 @@ export default css`
     margin-right: 20px;
     }
 
-    @-webkit-keyframes slide-in-top {
+    @-webkit-keyframes slide-in-left {
     0% {
-        -webkit-transform: translateY(-1000px);
-        transform: translateY(-1000px);
-        opacity: 0;
+      -webkit-transform: translateX(-1000px);
+      transform: translateX(-1000px);
+      opacity: 0;
     }
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
     }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+      transform: translateX(-1000px);
+      opacity: 0;
     }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .disappear {
+    -webkit-animation: disappear 1s;
+    animation: disappear 1s;
+  }
 
-    @keyframes slide-in-top {
-    0% {
-        -webkit-transform: translateY(-1000px);
-        transform: translateY(-1000px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
-    }
     @media (max-width: 1650px) {
         .game-container {
             width: 65%;
